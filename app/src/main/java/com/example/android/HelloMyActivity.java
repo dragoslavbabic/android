@@ -20,16 +20,6 @@ public class HelloMyActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         Log.i(TAG,"logB11");
 
-        message = findViewById(R.id.clickCounter);
-        ImageView droid = findViewById(R.id.droidImage);
-
-        //Define and attach click listener
-        droid.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                tapDroid();
-            }
-        });
     }
 
     private void tapDroid() {

@@ -2,4 +2,6 @@
     <string name="app_name">Android</string>
     <string name="welcome_text">Hello my!</string>
     <string name="textEmail">E-mail</string>
+    <string name="txtLogin">LOGIN</string>
+    <string name="btnText">Uloguj se!</string>
 </resources>
