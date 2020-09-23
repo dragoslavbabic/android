@@ -44,9 +44,9 @@
         tools:layout_editor_absoluteX="1dp" />
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/button2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:id="@+id/buttonVozila"
+        android:layout_width="178dp"
+        android:layout_height="58dp"
         android:text="@string/buttonTextVozila"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
