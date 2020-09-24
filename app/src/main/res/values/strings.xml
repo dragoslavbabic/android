@@ -6,4 +6,5 @@
     <string name="btnText">Uloguj se!</string>
     <string name="textPocetna">Evidencija vožnje</string>
     <string name="buttonTextVozila">Vozila</string>
+    <string name="label">label</string>
 </resources>
