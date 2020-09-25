@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">Android</string>
     <string name="welcome_text">Hello my!</string>
-    <string name="textEmail">E-mail</string>
+    <string name="textEmail">E-mail adresa</string>
     <string name="txtLogin">LOGIN</string>
     <string name="btnText">Uloguj se!</string>
     <string name="textPocetna">Evidencija vožnje</string>
