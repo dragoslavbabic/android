@@ -27,35 +27,40 @@
         android:textColor="#FAFAFA"
         android:textColorHighlight="?android:attr/colorBackground"
         android:textSize="30sp"
+
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/editTextTextEmailAddress"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="220dp"
-        android:layout_height="50dp"
+        android:layout_height="55dp"
         android:layout_marginStart="24dp"
         android:layout_marginLeft="24dp"
         android:layout_marginTop="50dp"
         android:layout_marginEnd="24dp"
         android:layout_marginRight="24dp"
         android:ems="10"
+        android:hint="@string/textEmail"
         android:inputType="textEmailAddress"
         android:textColor="#FFFFFF"
-        android:textColorHint="#FFFFFF"
-        android:hint="@string/textEmail"
+        android:textColorHint="#7F7F7F"
         app:backgroundTint="@color/blue_gray_light"
+        app:boxBackgroundMode="outline"
+        app:boxStrokeColor="@color/text_input_outline_color"
+        app:hintTextColor="#D6D6D6"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textLogin"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        app:layout_constraintTop_toBottomOf="@+id/textLogin">
 
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:textColor="#D2CCCC" />
+            android:textColor="#D2CCCC"
+            android:textSize="18sp" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <EditText
