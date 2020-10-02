@@ -4,7 +4,7 @@
     <string name="textEmail"><i>e-mail adresa</i></string>
     <string name="textPassword"><i>lozinka</i></string>
     <string name="txtLogin">LOGIN</string>
-    <string name="btnText">Uloguj se!</string>
+    <string name="btnText">Prijavi se!</string>
     <string name="textPocetna">Evidencija vožnje</string>
     <string name="buttonTextVozila">Vozila</string>
     <string name="label">label</string>

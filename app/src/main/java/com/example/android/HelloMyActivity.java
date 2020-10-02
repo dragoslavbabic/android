@@ -8,6 +8,7 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.content.Intent;
 
 public class HelloMyActivity extends AppCompatActivity {
     private static final String TAG = "logBr1";
@@ -20,6 +21,11 @@ public class HelloMyActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         Log.i(TAG,"logB11");
 
+    }
+
+    public void goToPocetna(View view){
+        Intent i = new Intent(this, PocetnaActivity.class);
+        startActivity(i);
     }
 
     private void tapDroid() {
