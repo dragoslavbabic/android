@@ -7,32 +7,74 @@
     android:background="#000000"
     tools:context=".PocetnaActivity">
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="310dp"
-        android:layout_height="230dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/buttonVozila"
+        android:layout_width="250dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="30dp"
+        android:text="@string/btnVozila"
+        android:textSize="20sp"
+        app:backgroundTint="#4E4D4D"
+        app:cornerRadius="25dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/divider"
-        app:srcCompat="@drawable/car" />
+        app:layout_constraintTop_toBottomOf="@+id/divider" />
 
-    <EditText
-        android:id="@+id/editTextTextPersonName"
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/buttonNovaVoznja"
+        android:layout_width="250dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/btnNovaVoznja"
+        android:textSize="20sp"
+        app:backgroundTint="#4E4D4D"
+        app:cornerRadius="25dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/buttonZatvoriVoznju"
+        android:layout_width="250dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="35dp"
+        android:text="@string/btnZatvoriVoznju"
+        android:textSize="20sp"
+        app:backgroundTint="#4E4D4D"
+        app:cornerRadius="25dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonNovaVoznja" />
+
+    <TextView
+        android:id="@+id/textNaslov"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
-        android:ems="10"
-        android:gravity="center_horizontal"
-        android:inputType="textPersonName"
-        android:text="@string/textPocetna"
-        android:textColor="#FFFFFF"
+        android:text="@string/txtEvidencija"
+        android:textColor="#FAFAFA"
+        android:textColorHighlight="?android:attr/colorBackground"
+
         android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="310dp"
+        android:layout_height="230dp"
+        android:layout_marginTop="20dp"
+        android:contentDescription="@string/imgPositive"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonVozila"
+        app:srcCompat="@drawable/car" />
 
     <View
         android:id="@+id/divider"
@@ -44,18 +86,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName" />
-
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/buttonVozila"
-        android:layout_width="178dp"
-        android:layout_height="58dp"
-        android:layout_marginTop="60dp"
-        android:text="@string/buttonTextVozila"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/divider" />
+        app:layout_constraintTop_toBottomOf="@+id/textNaslov" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
