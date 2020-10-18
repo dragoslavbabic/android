@@ -14,6 +14,7 @@
         android:layout_marginTop="30dp"
         android:text="@string/btnVozila"
         android:textSize="20sp"
+        android:onClick="goToSpisakVozila"
         app:backgroundTint="#4E4D4D"
         app:cornerRadius="25dp"
         app:layout_constraintEnd_toEndOf="parent"
