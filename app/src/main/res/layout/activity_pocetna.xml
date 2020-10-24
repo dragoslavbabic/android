@@ -7,7 +7,7 @@
     android:background="#000000"
     tools:context=".PocetnaActivity">
 
-    <com.google.android.material.button.MaterialButton
+    <Button
         android:id="@+id/buttonVozila"
         android:layout_width="250dp"
         android:layout_height="60dp"
@@ -55,7 +55,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
-        android:text="@string/txtEvidencija"
+        android:text="@string/txtSpisakVozila"
         android:textColor="#FAFAFA"
         android:textColorHighlight="?android:attr/colorBackground"
 
