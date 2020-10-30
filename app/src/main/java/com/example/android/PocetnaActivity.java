@@ -13,7 +13,7 @@ public class PocetnaActivity extends AppCompatActivity {
         setContentView(R.layout.activity_pocetna);
     }
     public void goToSpisakVozila(View view){
-        Intent i = new Intent(this, SpisakVozila.class);
+        Intent i = new Intent(this, SpisakVozilaActivity.class);
         startActivity(i);
     }
 }

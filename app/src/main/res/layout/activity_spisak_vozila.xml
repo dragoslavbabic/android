@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#000000"
-    tools:context=".SpisakVozila">
+    tools:context=".SpisakVozilaActivity">
 
     <LinearLayout
         android:layout_width="0dp"
@@ -99,9 +99,28 @@
 
     <ListView
         android:id="@+id/listSpisakVozila"
-        android:layout_width="409dp"
-        android:layout_height="669dp"
-        tools:layout_editor_absoluteX="1dp"
-        tools:layout_editor_absoluteY="61dp" />
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#000000"
+        app:layout_constraintBottom_toBottomOf="@id/HBguideList"
+        app:layout_constraintEnd_toEndOf="@id/VRguideTopMenu"
+        app:layout_constraintStart_toStartOf="@id/VLguideTopMenu"
+        android:divider="@color/colorPrimary"
+        android:dividerHeight="1dip"
+        app:layout_constraintTop_toTopOf="@id/HTguideList" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/HTguideList"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.1504788" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/HBguideList"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.95" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
