@@ -1,16 +1,14 @@
-package com.example.android;
+package com.example.android.activity;
 
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
-import android.widget.ImageView;
 import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.content.Intent;
+import com.example.android.R;
 
-public class HelloMyActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity {
     private static final String TAG = "logBr1";
     private TextView message;
     private int counter = 0;

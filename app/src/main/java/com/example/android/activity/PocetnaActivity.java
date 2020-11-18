@@ -1,9 +1,10 @@
-package com.example.android;
+package com.example.android.activity;
 
 import android.content.Intent;
 import android.view.View;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
+import com.example.android.R;
 
 public class PocetnaActivity extends AppCompatActivity {
 
