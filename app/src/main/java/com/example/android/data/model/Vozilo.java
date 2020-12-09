@@ -8,8 +8,8 @@ public class Vozilo {
 
     private String id;
     private Date datum_registracije;
-    private Integer predjeno_km;
-    private String registarski_broj;
+    private Integer trenutnaKm;
+    private String registarskiBroj;
     private String naziv;
     private Boolean zauzeto;
     private Map<String,Object> additionalProperties = new HashMap<String,Object>();
@@ -30,20 +30,20 @@ public class Vozilo {
         this.datum_registracije = datum_registracije;
     }
 
-    public Integer getPredjeno_km() {
-        return predjeno_km;
+    public Integer getTrenutnaKm() {
+        return trenutnaKm;
     }
 
-    public void setPredjeno_km(Integer predjeno_km) {
-        this.predjeno_km = predjeno_km;
+    public void setTrenutnaKm(Integer trenutnaKm) {
+        this.trenutnaKm = trenutnaKm;
     }
 
-    public String getRegistarski_broj() {
-        return registarski_broj;
+    public String getRegistarskiBroj() {
+        return registarskiBroj;
     }
 
-    public void setRegistarski_broj(String registarski_broj) {
-        this.registarski_broj = registarski_broj;
+    public void setRegistarskiBroj(String registarskiBroj) {
+        this.registarskiBroj = registarskiBroj;
     }
 
     public String getNaziv() {
@@ -69,4 +69,23 @@ public class Vozilo {
     public void setAdditionalProperties(Map<String, Object> additionalProperties) {
         this.additionalProperties = additionalProperties;
     }
+
+    public Vozilo() {
+    }
+
+    public Vozilo(String id, Date datum_registracije, Integer trenutnaKm, String registarskiBroj, String naziv, Boolean zauzeto) {
+        this.id = id;
+        this.datum_registracije = datum_registracije;
+        this.trenutnaKm = trenutnaKm;
+        this.registarskiBroj = registarskiBroj;
+        this.naziv = naziv;
+        this.zauzeto = zauzeto;
+    }
+
+    @Override
+    public String toString(){
+        return this.getRegistarskiBroj() + " ("+this.getNaziv() + ")";
+    }
+
+
 }
