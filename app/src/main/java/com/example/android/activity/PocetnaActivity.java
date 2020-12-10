@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.view.View;
+import android.widget.Button;
 import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
@@ -20,6 +21,7 @@ import java.util.List;
 public class PocetnaActivity extends AppCompatActivity {
     MainActivity ma = new MainActivity();
     SharedPreferences prefs;
+
     String user;
 
 
@@ -27,6 +29,16 @@ public class PocetnaActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pocetna);
+        Button bv = findViewById(R.id.buttonVozila);
+
+        prefs = getSharedPreferences("Prefs", Context.MODE_PRIVATE);
+        if (!prefs.getBoolean("adminKey", false)){
+            bv.setVisibility(View.GONE);
+        }
+        else{
+            bv.setVisibility(View.VISIBLE);
+        }
+
 
     }
     public void goToSpisakVozila(View view){
@@ -51,7 +63,6 @@ public class PocetnaActivity extends AppCompatActivity {
                 else{
                     Toast.makeText(PocetnaActivity.this, "Već imate otvorenu vožnju! \n Morate zatvoriti vožnju ID= "+ otvorenaVoznja, Toast.LENGTH_LONG).show();
                     startActivity(i);
-
                 }
             }
             @Override
@@ -60,6 +71,4 @@ public class PocetnaActivity extends AppCompatActivity {
         };
         ka.getKorisnik(responseCallback,view);
     }
-
-
 }

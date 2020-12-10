@@ -6,7 +6,7 @@
     <string name="txtLogin">LOGIN</string>
     <string name="btnText">Prijavi se!</string>
     <string name="textPocetna">Evidencija vožnje</string>
-    <string name="buttonTextVozila">Vozila</string>
+    <string name="buttonTextAdmin">Administracija</string>
     <string name="label">label</string>
     <string name="txtSpisakVozila">Evidencija vožnje</string>
     <string name="btnVozila">Vozila</string>
@@ -35,6 +35,16 @@
     <string name="korisnik"><i>korisnik</i></string>
     <string name="napomena">napomena</string>
     <string name="napomenaMultiline">napomena:</string>
+
+    <string name="textZatvaranjeVoznje">Zatvaranje vožnje</string>
+    <string name="hintZavrsnaKm"><i>završna km</i></string>
+
+    <string name="vremeZavrsetkaVoznje"><i>vreme završetka vožnje</i></string>
+    <string name="textVoziloNaziv"><i>vozilo</i></string>
+
+
+
+
 
 
 </resources>

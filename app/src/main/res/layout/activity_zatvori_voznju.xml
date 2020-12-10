@@ -38,7 +38,7 @@
             android:layout_gravity="center|top"
             android:layout_weight="1"
             android:gravity="center"
-            android:text="@string/textOtvaranjeVoznje"
+            android:text="@string/textZatvaranjeVoznje"
             android:textColor="@color/colorPrimary"
             android:textSize="18sp" />
 
@@ -117,32 +117,29 @@
         app:layout_constraintGuide_percent="0.95" />
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/voziloDropDown"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+        android:id="@+id/txtVoziloNaziv"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:inputType="textNoSuggestions"
+        android:layout_height="0dp"
+        android:ems="10"
+        android:focusable="false"
+        android:hint="@string/textVoziloNaziv"
+        android:textColor="#FFFFFF"
         android:textColorHint="#8d8a8a"
-        app:boxStrokeColor="#fff"
-        app:endIconTint="#FFFFFF"
+        app:boxStrokeColor="@color/text_view"
+        app:layout_constraintBottom_toTopOf="@+id/HTguideList"
         app:layout_constraintEnd_toStartOf="@+id/VRguideTopMenu"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="@+id/VLguideTopMenu"
-        app:layout_constraintTop_toTopOf="@+id/HTguideList">
-        <!--        app:hintTextColor="#D6D6D6">-->
+        app:layout_constraintTop_toTopOf="@+id/HBguideTopMenu">
 
-        <AutoCompleteTextView
-            android:id="@+id/filled_exposed_dropdown"
+        <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:focusable="false"
-            android:hint="@string/hintVozilo"
-            android:inputType="textNoSuggestions"
-            android:lines="1"
-            android:singleLine="true"
-            android:textColor="#fff"
-            android:autoSizeTextType="uniform"
-            android:textSize="18sp" />
+            android:inputType="none"
+            android:textColor="#FFFFFF" />
     </com.google.android.material.textfield.TextInputLayout>
+
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/pocetnaKm"
@@ -159,7 +156,7 @@
         app:boxStrokeColor="@color/text_view"
         app:layout_constraintEnd_toStartOf="@+id/VViewHalf"
         app:layout_constraintStart_toStartOf="@+id/VLguideTopMenu"
-        app:layout_constraintTop_toBottomOf="@+id/voziloDropDown">
+        app:layout_constraintTop_toTopOf="@+id/HTguideList">
 
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
@@ -168,6 +165,32 @@
             android:textColor="#FFFFFF" />
 
     </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/zavrsnaKm"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="25dp"
+        android:ems="10"
+        android:focusable="false"
+        android:hint="@string/hintZavrsnaKm"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#8d8a8a"
+        app:boxStrokeColor="@color/text_view"
+        app:layout_constraintEnd_toStartOf="@+id/VRguideTopMenu"
+        app:layout_constraintStart_toStartOf="@+id/VViewHalf"
+        app:layout_constraintTop_toTopOf="@+id/HTguideList">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="none"
+            android:textColor="#FFFFFF" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/VViewHalf"
@@ -191,7 +214,7 @@
         app:boxStrokeColor="@color/text_view"
         app:layout_constraintEnd_toStartOf="@+id/VRguideTopMenu"
         app:layout_constraintStart_toStartOf="@+id/VViewHalf"
-        app:layout_constraintTop_toBottomOf="@+id/voziloDropDown">
+        app:layout_constraintTop_toBottomOf="@+id/zavrsnaKm">
 
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
@@ -244,7 +267,7 @@
         app:endIconTint="#FFFFFF"
         app:layout_constraintEnd_toStartOf="@+id/VRguideTopMenu"
         app:layout_constraintStart_toStartOf="@+id/VViewHalf"
-        app:layout_constraintTop_toBottomOf="@+id/pocetnaKm">
+        app:layout_constraintTop_toBottomOf="@+id/destinacija">
         <!--        app:hintTextColor="#D6D6D6">-->
 
         <AutoCompleteTextView
@@ -290,7 +313,6 @@
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
         android:layout_marginTop="25dp"
         android:ems="10"
         android:focusable="auto"
@@ -299,8 +321,8 @@
         android:textColorHint="#8d8a8a"
         app:boxStrokeColor="@color/text_view"
         app:layout_constraintEnd_toStartOf="@+id/VRguideTopMenu"
-        app:layout_constraintStart_toStartOf="@+id/VViewHalf"
-        app:layout_constraintTop_toBottomOf="@+id/svrhaVoznjeDropDown">
+        app:layout_constraintStart_toStartOf="@+id/VLguideTopMenu"
+        app:layout_constraintTop_toBottomOf="@+id/vreme_pocetka_voznje">
 
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
@@ -317,7 +339,6 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="25dp"
-        android:layout_marginEnd="16dp"
         android:ems="10"
         android:focusable="auto"
         android:hint="@string/napomenaMultiline"
@@ -326,7 +347,7 @@
         app:boxStrokeColor="@color/text_view"
         app:layout_constraintEnd_toStartOf="@+id/VRguideTopMenu"
         app:layout_constraintStart_toStartOf="@+id/VLguideTopMenu"
-        app:layout_constraintTop_toBottomOf="@+id/vreme_pocetka_voznje">
+        app:layout_constraintTop_toBottomOf="@+id/korisnik">
 
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"

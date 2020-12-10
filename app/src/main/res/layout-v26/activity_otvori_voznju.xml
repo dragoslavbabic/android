@@ -95,7 +95,7 @@
 
     <View
         android:id="@+id/divider2"
-        android:layout_width="409dp"
+        android:layout_width="0dp"
         android:layout_height="1dp"
         android:background="@color/blue_gray_light"
         app:layout_constraintEnd_toEndOf="@id/VRguideTopMenu"
@@ -141,7 +141,7 @@
             android:singleLine="true"
             android:textColor="#fff"
             android:autoSizeTextType="uniform"
-            android:textSize="18sp" />
+             />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -228,7 +228,8 @@
             android:lines="1"
             android:singleLine="true"
             android:textColor="#fff"
-            android:textSize="12sp" />
+            android:autoSizeTextType="uniform"
+            />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -257,7 +258,8 @@
             android:lines="1"
             android:singleLine="true"
             android:textColor="#fff"
-            android:textSize="12sp" />
+            android:autoSizeTextType="uniform"
+            />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -281,7 +283,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textColor="#FFFFFF"
-            android:textSize="12sp" />
+            android:autoSizeTextType="uniform"
+             />
 
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -306,7 +309,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textColor="#FFFFFF"
-            android:textSize="12sp" />
+            android:autoSizeTextType="uniform"/>
 
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -332,7 +335,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="textMultiLine"
-            android:textColor="#FFFFFF" />
+            android:textColor="#FFFFFF"
+            android:autoSizeTextType="uniform"/>
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.progressindicator.CircularProgressIndicator

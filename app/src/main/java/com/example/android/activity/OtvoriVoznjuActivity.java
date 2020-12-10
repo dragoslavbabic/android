@@ -55,7 +55,7 @@ public class OtvoriVoznjuActivity extends AppCompatActivity{
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_otvori_voznju);
-        predjenokm = findViewById(R.id.predjenoKm);
+        predjenokm = findViewById(R.id.pocetnaKm);
         destinacija = findViewById(R.id.destinacija);
         svrhaVoznjeDropdown = findViewById(R.id.svrha_voznje_exposed_dropdown);
         stanjeVozilaDropdown = findViewById(R.id.stanje_vozila_exposed_dropdown);
