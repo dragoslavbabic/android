@@ -13,6 +13,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".activity.OtvoriVoznjuActivity" />
+        <activity android:name=".activity.ZatvoriVoznjuActivity" />
         <activity android:name=".activity.KorisniciActivity" />
         <activity android:name=".activity.VozilaActivity" />
         <activity

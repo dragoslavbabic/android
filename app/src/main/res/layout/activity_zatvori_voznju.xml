@@ -95,7 +95,7 @@
 
     <View
         android:id="@+id/divider2"
-        android:layout_width="409dp"
+        android:layout_width="0dp"
         android:layout_height="1dp"
         android:background="@color/blue_gray_light"
         app:layout_constraintEnd_toEndOf="@id/VRguideTopMenu"
@@ -107,7 +107,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.1504788" />
+        app:layout_constraintGuide_percent="0.17" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/HBguideList"
@@ -121,8 +121,9 @@
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:layout_marginTop="5dp"
         android:ems="10"
-        android:focusable="false"
+        android:focusable="auto"
         android:hint="@string/textVoziloNaziv"
         android:textColor="#FFFFFF"
         android:textColorHint="#8d8a8a"
@@ -135,9 +136,10 @@
 
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:inputType="none"
-            android:textColor="#FFFFFF" />
+            android:layout_height="match_parent"
+            android:padding="0dp"
+            android:textColor="#FFFFFF"
+            android:textSize="12sp" />
     </com.google.android.material.textfield.TextInputLayout>
 
 
@@ -226,13 +228,14 @@
 
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/svrhaVoznjeDropDown"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+        android:id="@+id/svrhaVoznje"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="25dp"
         android:layout_marginEnd="16dp"
         android:inputType="textNoSuggestions"
+        android:hint="@string/svrha_voznje"
         android:textColorHint="#8d8a8a"
         app:boxStrokeColor="#fff"
         app:endIconTint="#FFFFFF"
@@ -241,22 +244,16 @@
         app:layout_constraintTop_toBottomOf="@+id/pocetnaKm">
         <!--        app:hintTextColor="#D6D6D6">-->
 
-        <AutoCompleteTextView
-            android:id="@+id/svrha_voznje_exposed_dropdown"
+        <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:focusable="false"
-            android:hint="@string/svrha_voznje"
-            android:inputType="textNoSuggestions"
-            android:lines="1"
-            android:singleLine="true"
-            android:textColor="#fff"
+            android:textColor="#FFFFFF"
             android:textSize="12sp" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/stanjeVozilaDropDown"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+        android:id="@+id/stanjeVozila"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -264,27 +261,22 @@
         android:inputType="textNoSuggestions"
         android:textColorHint="#8d8a8a"
         app:boxStrokeColor="#fff"
+        android:hint="@string/stanje_vozila"
         app:endIconTint="#FFFFFF"
         app:layout_constraintEnd_toStartOf="@+id/VRguideTopMenu"
         app:layout_constraintStart_toStartOf="@+id/VViewHalf"
         app:layout_constraintTop_toBottomOf="@+id/destinacija">
         <!--        app:hintTextColor="#D6D6D6">-->
 
-        <AutoCompleteTextView
-            android:id="@+id/stanje_vozila_exposed_dropdown"
+        <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:focusable="false"
-            android:hint="@string/stanje_vozila"
-            android:inputType="textNoSuggestions"
-            android:lines="1"
-            android:singleLine="true"
-            android:textColor="#fff"
+            android:textColor="#FFFFFF"
             android:textSize="12sp" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/vreme_pocetka_voznje"
+        android:id="@+id/vreme_zavrsetka_voznje"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -292,13 +284,13 @@
         android:layout_marginEnd="16dp"
         android:ems="10"
         android:focusable="auto"
-        android:hint="@string/vremePocetkaVoznje"
+        android:hint="@string/vremeZavrsetkaVoznje"
         android:textColor="#FFFFFF"
         android:textColorHint="#8d8a8a"
         app:boxStrokeColor="@color/text_view"
         app:layout_constraintEnd_toStartOf="@+id/VViewHalf"
         app:layout_constraintStart_toStartOf="@+id/VLguideTopMenu"
-        app:layout_constraintTop_toBottomOf="@+id/svrhaVoznjeDropDown">
+        app:layout_constraintTop_toBottomOf="@+id/svrhaVoznje">
 
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
@@ -322,7 +314,7 @@
         app:boxStrokeColor="@color/text_view"
         app:layout_constraintEnd_toStartOf="@+id/VRguideTopMenu"
         app:layout_constraintStart_toStartOf="@+id/VLguideTopMenu"
-        app:layout_constraintTop_toBottomOf="@+id/vreme_pocetka_voznje">
+        app:layout_constraintTop_toBottomOf="@+id/vreme_zavrsetka_voznje">
 
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
