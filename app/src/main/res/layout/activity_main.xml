@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#262728"
+    android:background="#161e23"
     tools:context=".activity.MainActivity">
 
     <TextView
@@ -44,6 +44,7 @@
             android:id="@+id/inputEmail"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:backgroundTint="#192730"
             android:textColor="#D2CCCC"
             android:textSize="18sp" />
     </com.google.android.material.textfield.TextInputLayout>
@@ -99,10 +100,13 @@
         android:id="@+id/buttonLogin"
         android:layout_width="180dp"
         android:layout_height="55dp"
+        android:backgroundTint="#192730"
+        android:elevation="6dp"
         android:onClick="goToPocetna"
         android:text="@string/btnText"
-        app:backgroundTint="#4E4D4D"
+        app:backgroundTintMode="src_atop"
         app:cornerRadius="18dp"
+        app:elevation="3dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"

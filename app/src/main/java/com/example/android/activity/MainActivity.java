@@ -84,6 +84,7 @@ public class MainActivity extends AppCompatActivity {
         String userSave = korisnickoIme.get(0).getKorisnickoIme();
         String userSaveId = korisnickoIme.get(0).getId();
         Boolean userSaveAdminRole = korisnickoIme.get(0).getAdmin();
+        Log.d("rola", userSaveAdminRole.toString());
         sharedpreferences = getSharedPreferences(users_details, Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedpreferences.edit();
         editor.putString(korisnik, userSave);

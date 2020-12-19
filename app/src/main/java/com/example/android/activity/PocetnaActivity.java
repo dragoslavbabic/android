@@ -30,7 +30,7 @@ public class PocetnaActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pocetna);
-        Button bv = findViewById(R.id.buttonAdmin);
+        Button bv = findViewById(R.id.btnAdmin);
         i = new Intent(this, OtvoriVoznjuActivity.class);
         prefs = getSharedPreferences("Prefs", Context.MODE_PRIVATE);
         String korisnik = prefs.getString("userKey",null);
@@ -55,10 +55,11 @@ public class PocetnaActivity extends AppCompatActivity {
         ka.getKorisnikObjectById(responseCallback,korisnik);
     }
 
-    public void goToSpisakVozila(View view){
-        Intent i = new Intent(this, VozilaActivity.class);
+    public void goToAdmin(View view){
+        Intent i = new Intent(this, AdminActivity.class);
         startActivity(i);
     }
+
 
     public void goToOtvoriVoznju(View view){
         i = new Intent(this, OtvoriVoznjuActivity.class);
@@ -83,4 +84,18 @@ public class PocetnaActivity extends AppCompatActivity {
             startActivity(i);
         }
     }
+
+    public void goToGorivo(View view){
+        SharedPreferences.Editor editor = prefs.edit();
+        editor.putString(voznjaId, otvorenaVoznja);
+        editor.commit();
+        i = new Intent(this, GorivoActivity.class);
+        if(otvorenaVoznja.isEmpty()){
+            Toast.makeText(PocetnaActivity.this, "Nemate otvorenu vožnju!", Toast.LENGTH_LONG).show();
+        }
+        else{
+            startActivity(i);
+        }
+    }
+
 }

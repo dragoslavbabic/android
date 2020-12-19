@@ -35,16 +35,20 @@
     <string name="korisnik"><i>korisnik</i></string>
     <string name="napomena">napomena</string>
     <string name="napomenaMultiline">napomena:</string>
-
+    <string name="btnGorivo">Gorivo</string>
+    <string name="btnServis">Servis</string>
+    <string name="btnPranje">Pranje</string>
     <string name="textZatvaranjeVoznje">Zatvaranje vožnje</string>
     <string name="hintZavrsnaKm"><i>završna km</i></string>
-
     <string name="vremeZavrsetkaVoznje"><i>vreme završetka vožnje</i></string>
     <string name="textVoziloNaziv"><i>vozilo</i></string>
-
-
-
-
+    <string name="vrsta_goriva">vrsta goriva</string>
+    <string name="sipano_litara">sipano litara</string>
+    <string name="iznos">iznos</string>
+    <string name="admin_stranica">Admin stranica</string>
+    <string name="lista_vozila">Lista vozila</string>
+    <string name="lista_voznji">Lista vožnji</string>
+    <string name="lista_korisnika">Lista korisnika</string>
 
 
 </resources>
