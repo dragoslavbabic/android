@@ -5,7 +5,7 @@
     style="@style/AppTheme"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#00213B"
+    android:background="#001A2E"
     tools:context=".activity.OtvoriVoznjuActivity">
 
 
@@ -123,7 +123,7 @@
         android:layout_height="wrap_content"
         android:inputType="textNoSuggestions"
         android:textColorHint="#8d8a8a"
-        app:boxStrokeColor="#1f3747"
+        app:boxStrokeColor="@color/text_view"
         app:endIconTint="#FFFFFF"
         app:layout_constraintEnd_toStartOf="@+id/VRguideTopMenu"
         app:layout_constraintStart_toStartOf="@+id/VLguideTopMenu"

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:elevation="2dp"
+    android:elevation="4dp"
     tools:context=".activity.VoznjaActivity">
 
     <androidx.cardview.widget.CardView
@@ -12,11 +12,12 @@
         style="@style/CardView.Dark"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="2dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="3dp"
-        app:cardBackgroundColor="#00213B"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="10dp"
+        app:cardBackgroundColor="#1f3747"
         app:cardCornerRadius="6dp"
+        app:cardElevation="6dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -98,7 +99,7 @@
                     android:layout_width="0dp"
                     android:layout_height="1dp"
                     android:layout_marginTop="3dp"
-                    android:background="#8D8A8A"
+                    android:background="#2d5e7f"
                     app:layout_constraintEnd_toStartOf="@+id/guideline2"
                     app:layout_constraintHorizontal_bias="0.5"
                     app:layout_constraintStart_toStartOf="parent"
@@ -132,7 +133,7 @@
                             android:layout_height="wrap_content"
                             android:text="Stanje vozila:"
                             android:textAlignment="textEnd"
-                            android:textColor="@color/colorPrimary" />
+                            android:textColor="@color/text_view" />
 
                         <TextView
                             android:id="@+id/txtStanje"
@@ -157,7 +158,7 @@
                             android:layout_height="wrap_content"
                             android:text="Svrha vožnje:"
                             android:textAlignment="textEnd"
-                            android:textColor="@color/colorPrimary" />
+                            android:textColor="@color/text_view" />
 
                         <TextView
                             android:id="@+id/txtSvrha"
@@ -177,12 +178,12 @@
                         android:layout_marginTop="2dp">
 
                         <TextView
-                            android:id="@+id/predjeno"
+                            android:id="@+id/predjenoKm"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Pređeno km:"
                             android:textAlignment="textEnd"
-                            android:textColor="@color/colorPrimary" />
+                            android:textColor="@color/text_view" />
 
                         <TextView
                             android:id="@+id/txtPredjenoKm"
@@ -207,7 +208,7 @@
                             android:layout_height="wrap_content"
                             android:text="Korisnik UID:"
                             android:textAlignment="textEnd"
-                            android:textColor="@color/colorPrimary" />
+                            android:textColor="@color/text_view" />
 
                         <TextView
                             android:id="@+id/txtKorisnik"
@@ -227,12 +228,12 @@
                         android:layout_marginTop="2dp">
 
                         <TextView
-                            android:id="@+id/yavrsetak"
+                            android:id="@+id/zavrsetak"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Vreme završetka:"
                             android:textAlignment="textEnd"
-                            android:textColor="@color/colorPrimary" />
+                            android:textColor="@color/text_view" />
 
                         <TextView
                             android:id="@+id/txtZavrsetak"
@@ -257,7 +258,7 @@
                             android:layout_height="wrap_content"
                             android:text="Destinacija:"
                             android:textAlignment="textEnd"
-                            android:textColor="@color/colorPrimary" />
+                            android:textColor="@color/text_view" />
 
                         <TextView
                             android:id="@+id/txtDestinacija"

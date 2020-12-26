@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#232323"
+    android:background="#001A2E"
     tools:context=".activity.VoznjaActivity">
 
     <LinearLayout
@@ -13,7 +13,6 @@
         android:layout_height="0dp"
         android:layout_marginStart="1dp"
         android:layout_marginEnd="1dp"
-        android:background="#232323"
         android:orientation="horizontal"
         app:layout_constraintBottom_toTopOf="@id/HBguideTopMenu"
         app:layout_constraintEnd_toEndOf="@id/VRguideTopMenu"
@@ -38,8 +37,8 @@
             android:layout_weight="1"
             android:gravity="center"
             android:text="@string/lista_voznji"
-            android:textColor="@color/colorPrimary"
-            android:textSize="18sp" />
+            android:textColor="@color/text_view"
+            android:textSize="24sp" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/buttonPostVoznja"
@@ -62,7 +61,6 @@
         android:layout_height="0dp"
         android:layout_marginStart="1dp"
         android:layout_marginEnd="1dp"
-        android:background="#5689B1"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -96,6 +94,14 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         app:layout_constraintGuide_percent="0.08" />
+
+    <View
+        android:id="@+id/divider4"
+        android:layout_width="409dp"
+        android:layout_height="1dp"
+        android:background="#2d5e7f"
+        app:layout_constraintTop_toTopOf="@+id/HBguideTopMenu"
+        tools:layout_editor_absoluteX="1dp" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -11,8 +11,6 @@ import android.os.Bundle;
 import com.example.android.R;
 import com.example.android.data.api.GorivoApi;
 import com.example.android.data.model.Gorivo;
-import com.example.android.data.model.StanjeVozila;
-import com.example.android.data.model.Voznja;
 import com.google.android.material.textfield.TextInputLayout;
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -82,7 +80,6 @@ public class GorivoActivity extends AppCompatActivity {
 
     public void postGorivo(View view) throws ParseException {
 
-
         iznos = Integer.parseInt(iznosRacuna.getEditText().getText().toString());
         litre = Integer.parseInt(kolicinaGoriva.getEditText().getText().toString());
         vrsta = vrstaGorivaDropDown.getText().toString();
@@ -90,7 +87,8 @@ public class GorivoActivity extends AppCompatActivity {
             Toast.makeText(GorivoActivity.this, "Morate popuniti sva polja!", Toast.LENGTH_LONG).show();
         }
         else{
-            Gorivo gorivo = new Gorivo(voznjaId,iznos,litre,vrsta);
+            Gorivo gorivo = new Gorivo(litre,iznos,vrsta,voznjaId);
+            Log.d("VOZNJA ID: ",voznjaId);
             Call<Gorivo> call =GorivoApi.getClient().createGorivo(gorivo);
             call.enqueue(new Callback<Gorivo>() {
 
@@ -104,6 +102,8 @@ public class GorivoActivity extends AppCompatActivity {
                     }
                     Toast.makeText(GorivoActivity.this, "Sipanje goriva je uspešno zabeleženo!", Toast.LENGTH_LONG).show();
                     assert response.body() != null;
+                    goToPocetna(view);
+
                     //String uid = response.body().getId();
                     //Log.d("test","UID= "+uid);
                 }
@@ -115,6 +115,5 @@ public class GorivoActivity extends AppCompatActivity {
             });
 
         }
-        goToPocetna(view);
     }
 }

@@ -7,11 +7,15 @@ import android.os.Build;
 import android.os.Bundle;
 import android.text.InputType;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.*;
 import androidx.annotation.RequiresApi;
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import com.example.android.R;
+import com.example.android.data.adapter.VozilaAdapter;
 import com.example.android.data.api.VoziloApi;
 import com.example.android.data.api.VoznjaApi;
 import com.example.android.data.model.StanjeVozila;
@@ -80,19 +84,32 @@ public class ZatvoriVoznjuActivity extends AppCompatActivity{
         napomena = findViewById(R.id.napomenaMultiLine);
         spinner = findViewById(R.id.progressCirc);
         spinner.setVisibility(View.GONE);
+
         Button postButton = findViewById(R.id.buttonPostVoznja);
         postButton.setOnClickListener(view -> {
             spinner.setVisibility(View.VISIBLE);
-
             try {
                 zatvoriVoznja(view);
             } catch (ParseException e) {
                 e.printStackTrace();
             }
         });
+        ActionBar actionBar = getSupportActionBar();
+        if (actionBar != null) {
+            actionBar.setDisplayHomeAsUpEnabled(true);
+        }
+
+
         getVoznjaIdData();
-        setDataInKorisnik();
+        //setDataInKorisnik();
     }
+
+    @Override
+    public boolean onSupportNavigateUp(){
+        finish();
+        return true;
+    }
+
 
     public void goToPocetna(View view){
         Intent i = new Intent(this, PocetnaActivity.class);
@@ -207,6 +224,7 @@ public class ZatvoriVoznjuActivity extends AppCompatActivity{
         spinner.setVisibility(View.GONE);
         goToPocetna(view);
     }
+
 }
 
 

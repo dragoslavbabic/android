@@ -4,20 +4,21 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:elevation="4dp"
+    android:elevation="2dp"
     tools:context=".activity.VozilaActivity">
 
     <androidx.cardview.widget.CardView
-        android:id="@+id/cardListaVozila"
+        android:id="@+id/cardListakorisnika"
         style="@style/CardView.Dark"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
+        android:layout_marginStart="15dp"
         android:layout_marginTop="15dp"
-        android:layout_marginEnd="10dp"
+        android:layout_marginEnd="15dp"
+        android:stateListAnimator="@null"
+
         app:cardBackgroundColor="#1f3747"
         app:cardCornerRadius="6dp"
-        app:cardElevation="6dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -27,28 +28,28 @@
             android:layout_height="match_parent">
 
             <TextView
-                android:id="@+id/cardNaslov"
+                android:id="@+id/txtNaslov"
                 style="@style/TextAppearance.AppCompat.Title"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:paddingStart="10dp"
-                android:text="NS 222 IK (Opel Astra)"
+                android:text="Jovan Jovanović (jovan.jovanovic)"
                 android:textColor="#D6D6D6"
                 android:textSize="18sp"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
-                android:id="@+id/cardPodnaslov"
+                android:id="@+id/txtPodnaslov"
                 style="@style/TextAppearance.AppCompat.Body1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
                 android:paddingStart="15dp"
                 android:textColor="@color/white"
-                app:layout_constraintTop_toBottomOf="@+id/cardNaslov"
+                app:layout_constraintTop_toBottomOf="@+id/txtNaslov"
                 tools:layout_editor_absoluteX="15dp"
-                tools:text="SLOBODNO" />
+                tools:text="Status: Nema aktivnu voznju" />
 
             <Button
                 android:id="@+id/arrowBtn"
@@ -61,16 +62,16 @@
                 android:backgroundTint="#FFFFFF"
                 android:textAlignment="gravity"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/cardPodnaslov" />
+                app:layout_constraintTop_toBottomOf="@+id/txtPodnaslov" />
 
             <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/expandableView"
+                android:id="@+id/cardDodatak"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
+                android:layout_marginTop="20dp"
                 android:paddingBottom="12dp"
                 android:visibility="visible"
-                app:layout_constraintTop_toBottomOf="@+id/cardPodnaslov">
+                app:layout_constraintTop_toBottomOf="@+id/txtPodnaslov">
 
                 <TextView
                     android:id="@+id/textView4"
@@ -117,15 +118,15 @@
                         android:layout_marginTop="2dp">
 
                         <TextView
-                            android:id="@+id/registracija"
+                            android:id="@+id/adminRole"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Datum registracije:"
+                            android:text="Admin status: "
                             android:textAlignment="textEnd"
                             android:textColor="@color/text_view" />
 
                         <TextView
-                            android:id="@+id/txtRegistracija"
+                            android:id="@+id/txtAdminRole"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:paddingLeft="10dp"
@@ -142,15 +143,15 @@
                         android:layout_marginTop="2dp">
 
                         <TextView
-                            android:id="@+id/s_interval"
+                            android:id="@+id/saobracajnaVaziDo"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Servisni interval:"
+                            android:text="Važenje saobraćajne:"
                             android:textAlignment="textEnd"
                             android:textColor="@color/text_view" />
 
                         <TextView
-                            android:id="@+id/txtServisniInterval"
+                            android:id="@+id/txtSaobracajnaVaziDo"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:paddingLeft="10dp"
@@ -167,15 +168,15 @@
                         android:layout_marginTop="2dp">
 
                         <TextView
-                            android:id="@+id/servis"
+                            android:id="@+id/otvorenaVoznjaId"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Km do servisa:"
+                            android:text="Otvorena vožnja ID:"
                             android:textAlignment="textEnd"
                             android:textColor="@color/text_view" />
 
                         <TextView
-                            android:id="@+id/txtDoServisaKm"
+                            android:id="@+id/txtOtvorenaVoznjaId"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:paddingLeft="10dp"
@@ -192,15 +193,15 @@
                         android:layout_marginTop="2dp">
 
                         <TextView
-                            android:id="@+id/trenutnokm"
+                            android:id="@+id/korisnikId"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Trenutno km:"
+                            android:text="Korisnik Id:"
                             android:textAlignment="textEnd"
                             android:textColor="@color/text_view" />
 
                         <TextView
-                            android:id="@+id/txtTrenutnoKm"
+                            android:id="@+id/txtKorisnikId"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:paddingLeft="10dp"

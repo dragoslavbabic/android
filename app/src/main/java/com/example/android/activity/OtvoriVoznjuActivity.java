@@ -217,6 +217,7 @@ public class OtvoriVoznjuActivity extends AppCompatActivity{
 
         spinner.setVisibility(View.GONE);
         goToPocetna(view);
+        finish();
     }
 }
 

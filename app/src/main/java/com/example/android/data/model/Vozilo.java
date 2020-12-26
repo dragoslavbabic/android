@@ -1,18 +1,36 @@
 package com.example.android.data.model;
 
+import com.google.gson.annotations.SerializedName;
+
 import java.util.Date;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 public class Vozilo {
 
     private String id;
+    @SerializedName("datumRegistracije")
     private Date datum_registracije;
     private Integer trenutnaKm;
     private String registarskiBroj;
     private String naziv;
+    private Integer servisniInterval;
+    private Integer poslednjiServisKm;
+    private Integer predjeno_km;
     private Boolean zauzeto;
+    private List sum;
+    private boolean expanded;
+
     private Map<String,Object> additionalProperties = new HashMap<String,Object>();
+
+    public Integer getPredjeno_km() {
+        return predjeno_km;
+    }
+
+    public List getSum() {
+        return sum;
+    }
 
     public String getId() {
         return id;
@@ -54,6 +72,14 @@ public class Vozilo {
         this.naziv = naziv;
     }
 
+    public Integer getServisniInterval() { return servisniInterval; }
+
+    public void setServisniInterval(Integer servisniInterval) { this.servisniInterval = servisniInterval; }
+
+    public Integer getPoslednjiServisKm() { return poslednjiServisKm; }
+
+    public void setPoslednjiServisKm(Integer poslednjiServisKm) { this.poslednjiServisKm = poslednjiServisKm; }
+
     public Boolean getZauzeto() {
         return zauzeto;
     }
@@ -61,6 +87,10 @@ public class Vozilo {
     public void setZauzeto(Boolean zauzeto) {
         this.zauzeto = zauzeto;
     }
+
+    public boolean isExpanded() { return expanded; }
+
+    public void setExpanded(boolean expanded) { this.expanded = expanded; }
 
     public Map<String, Object> getAdditionalProperties() {
         return additionalProperties;
@@ -73,13 +103,17 @@ public class Vozilo {
     public Vozilo() {
     }
 
-    public Vozilo(String id, Date datum_registracije, Integer trenutnaKm, String registarskiBroj, String naziv, Boolean zauzeto) {
+    public Vozilo(String id, Date datum_registracije, Integer trenutnaKm, String registarskiBroj, String naziv, Boolean zauzeto, Integer servisniInterval,Integer poslednjiServisKm, List sum) {
         this.id = id;
         this.datum_registracije = datum_registracije;
         this.trenutnaKm = trenutnaKm;
         this.registarskiBroj = registarskiBroj;
         this.naziv = naziv;
         this.zauzeto = zauzeto;
+        this.servisniInterval = servisniInterval;
+        this.poslednjiServisKm = poslednjiServisKm;
+        this.sum = sum;
+        this.expanded = false;
     }
 
     @Override

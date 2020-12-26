@@ -17,7 +17,7 @@ public class KorisniciApi {
     public static korisniciInt getClient(){
         if(retrofit==null){
             retrofit = new Retrofit.Builder()
-                    .baseUrl("http://192.168.0.15:8080/")
+                    .baseUrl("http://10.0.2.2:8080/")
                     .addConverterFactory(GsonConverterFactory.create())
                     .build();
         }
@@ -27,7 +27,4 @@ public class KorisniciApi {
     public void getKorisnikObjectById(Callback<List<Korisnici>> callback,String user){
         KorisniciApi.getClient().getKorisnickoIme(user).enqueue(callback);
     }
-
-
-
 }

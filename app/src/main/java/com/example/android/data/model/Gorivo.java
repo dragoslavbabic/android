@@ -5,16 +5,19 @@ public class Gorivo {
     private Integer litre;
     private Integer iznos;
     private String vrsta;
+    private String voznjaId;
 
     public Gorivo() {
     }
 
-    public Gorivo(String id, Integer litre, Integer iznos, String vrsta) {
+    public Gorivo(String id,Integer litre, Integer iznos,   String vrsta, String voznjaId) {
         this.id = id;
         this.litre = litre;
         this.iznos = iznos;
         this.vrsta = vrsta;
+        this.voznjaId = voznjaId;
     }
+
 
     public String getId() {
         return id;
@@ -47,6 +50,22 @@ public class Gorivo {
     public void setVrsta(String vrsta) {
         this.vrsta = vrsta;
     }
+
+    public String getVoznjaId() {
+        return voznjaId;
+    }
+
+    public void setVoznjaId(String voznjaId) {
+        this.voznjaId = voznjaId;
+    }
+
+    public Gorivo(Integer litre, Integer iznos, String vrsta, String voznjaId) {
+        this.voznjaId = voznjaId;
+        this.litre = litre;
+        this.iznos = iznos;
+        this.vrsta = vrsta;
+    }
+
 
 
 }
