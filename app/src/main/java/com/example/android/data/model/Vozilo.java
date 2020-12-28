@@ -18,8 +18,12 @@ public class Vozilo {
     private Integer servisniInterval;
     private Integer poslednjiServisKm;
     private Integer predjeno_km;
+    @SerializedName("gorivo_litre")
+    private Integer ukupnoLitara;
+    @SerializedName("gorivo_iznos")
+    private Integer ukupanIznosLitara;
     private Boolean zauzeto;
-    private List sum;
+    private List<Sum> sum;
     private boolean expanded;
 
     private Map<String,Object> additionalProperties = new HashMap<String,Object>();
@@ -28,7 +32,15 @@ public class Vozilo {
         return predjeno_km;
     }
 
-    public List getSum() {
+    public Integer getUkupnoLitara() {
+        return ukupnoLitara;
+    }
+
+    public Integer getUkupanIznosLitara() {
+        return ukupanIznosLitara;
+    }
+
+    public List<Sum> getSum() {
         return sum;
     }
 
@@ -103,7 +115,7 @@ public class Vozilo {
     public Vozilo() {
     }
 
-    public Vozilo(String id, Date datum_registracije, Integer trenutnaKm, String registarskiBroj, String naziv, Boolean zauzeto, Integer servisniInterval,Integer poslednjiServisKm, List sum) {
+    public Vozilo(String id, Date datum_registracije, Integer trenutnaKm, String registarskiBroj, String naziv, Boolean zauzeto, Integer servisniInterval,Integer poslednjiServisKm, List <Sum> sum) {
         this.id = id;
         this.datum_registracije = datum_registracije;
         this.trenutnaKm = trenutnaKm;
